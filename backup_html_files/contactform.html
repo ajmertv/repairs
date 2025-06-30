@@ -1,0 +1,80 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="contact form example">
+  <title>Contact Form Example 9414456385 9352214113 </title>
+</head>
+
+<body>
+  <h2 class="content-head is-center">Contact Us!</h2>
+  <aside>
+       <p>
+           We would <em>love</em> to hear from you! </p>
+           <p>Please use the <b><em>Contact Form</em></b>
+           to send us a message.
+       </p>
+   </aside>
+
+<!-- START HERE -->
+   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <!-- Style The Contact Form How Ever You Prefer -->
+   <link rel="stylesheet" href="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/style.css">
+
+  <form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="gurnani.mayank@gmail.com"
+  action="https://script.google.com/macros/s/AKfycbzthLADS3xu0Spt8aQqqgEdlx2W4gP1cvf2UB3MNmKZlZBzg2k/exec">
+    <!-- change the form action to your script url -->
+	
+	<fieldset class="pure-group">
+      <label for="PhoneNumber">PhoneNumber: </label>
+      <input id="PhoneNumber" name="PhoneNumber" placeholder="type your contact number" />
+    </fieldset>
+	
+    <fieldset class="pure-group">
+      <label for="name">Name: </label>
+      <input id="name" name="name" placeholder="type your full name here" />
+    </fieldset>
+	
+	<fieldset class="pure-group">
+      <label for="Address">Address: </label>
+      <input id="Address" name="Address" placeholder="type your address" />
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="ApplianceBrand_And_Problem">ApplianceBrand_And_Problem: </label>
+      <textarea id="ApplianceBrand_And_Problem" name="ApplianceBrand_And_Problem" rows="10"
+      placeholder="Tell us what's Problem with appliance giving appliance name , band name and model number..."></textarea>
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="email"><em>Your</em> Email Address:</label>
+      <input id="email" name="email" type="email" value=""
+      required placeholder="your.name@email.com"/>
+      <span id="email-invalid" style="display:none">
+        Must be a valid email address</span>
+    </fieldset>
+
+
+    <button class="button-success pure-button button-xlarge">
+      <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+
+  </form>
+
+  <!-- Customise the Thankyou Message People See when they submit the form: -->
+  <div style="display:none;" id="thankyou_message">
+    <h2><em>Thanks</em> for contacting us!
+      We will get back to you soon!</h2>
+  </div>
+
+  <!-- Submit the Form to Google Using "AJAX" -->
+  <script data-cfasync="false" type="text/javascript"
+  src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+  <!-- <script data-cfasync="false" type="text/javascript"
+  src="/form-submission-handler.js"></script> -->
+<!-- END -->
+
+</body>
+</html>
